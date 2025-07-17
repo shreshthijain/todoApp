@@ -49,7 +49,7 @@ def delete_completed_item(request):
     item.delete()
     history_item = History(
         created_by=request.user.username if request.user.is_authenticated else 'Anonymous',
-        action='Item Deleted'
+        action='Item(s) Deleted'
     )
     history_item.save()
     return redirect('index')
@@ -70,3 +70,6 @@ def history(request):
         'history_items': history_items
     }
     return render(request, 'todolist/history.html', context)
+
+def about(request):
+    return render(request, 'todolist/about.html')

@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TODO Web App Overview</title>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-light text-dark">
+  <nav class="navbar navbar-expand-lg bg-body-ter bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light bold" href="{% url 'index' %}">
+        <!-- <img src="{% static 'todolist\card-checklist.svg' %}" alt="Checklist Icon" height="24" width="24"/> -->
+        <i class="bi bi-card-checklist">&nbsp;TODO</i>
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="{% url 'history' %}">History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="{% url 'about' %}">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container py-5">
+    <header class="text-center mb-5">
+      <h1 class="display-4">TODO Web App</h1>
+      <p class="lead">Organize, track, and manage your tasks efficiently.</p>
+    </header>
+
+    <section class="mb-4">
+      <h2 class="h4">🏗️ Features</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Add, edit, and delete tasks</li>
+        <li class="list-group-item">Mark tasks as completed (strikethrough style)</li>
+        <li class="list-group-item">View history of actions and deletions</li>
+        <li class="list-group-item">Responsive design powered by Bootstrap</li>
+      </ul>
+    </section>
+
+    <section class="mb-4">
+      <h2 class="h4">⚙️ How It Works</h2>
+      <ol class="list-group list-group-numbered">
+        <li class="list-group-item">
+          **Add Task** – Enter task name in input field and click **ADD**.
+        </li>
+        <li class="list-group-item">
+          **Complete/Delete** – Click checkbox to strike-through or delete button to remove.
+        </li>
+        <li class="list-group-item">
+          **History Log** – All actions (add/delete/complete) are recorded and shown under “History of Todo Items.”
+        </li>
+      </ol>
+    </section>
+
+    <section class="mb-4">
+      <h2 class="h4">📱 Technologies Used</h2>
+      <p>Built using:</p>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Django (Python) for backend data handling</li>
+        <li class="list-group-item">SQLite for storing tasks and history</li>
+        <li class="list-group-item">Bootstrap 5 for UI styling and responsiveness</li>
+        <li class="list-group-item">Django templates for dynamic rendering</li>
+      </ul>
+    </section>
+
+    <section class="mb-4">
+      <h2 class="h4">🎯 Why You’ll Love It</h2>
+      <p>
+        This TODO Web App helps you stay productive by offering simple task
+        management with historical context. The history section ensures you can
+        review past activity, giving you clarity and control over your to-do list.
+      </p>
+    </section>
+
+    <footer class="text-center mt-5">
+      <p class="small text-muted"><b>Copyright &copy; Todo WebApp by Shreshthi Jain 2019</b></p>
+    </footer>
+  </div>
+</body>
+
+</html>
