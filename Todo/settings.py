@@ -27,13 +27,13 @@ SECRET_KEY = 'django-insecure-pw!j$6u7^8&o_zhbb*o7c2^xn$zs^x=!-j%sr%_v3yb#81^e+o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '.vercel.app', 'https://todowebapp.up.railway.app']
+ALLOWED_HOSTS = ['*']
 
 
 
-# CSRF_TRUSTED_ORIGINS = [
-#     'https://todowebapp.up.railway.app'
-# ]
+CSRF_TRUSTED_ORIGINS = [
+    'https://todowebapp.up.railway.app'
+]
 
 
 
